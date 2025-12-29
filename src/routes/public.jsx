@@ -6,7 +6,7 @@ const Public = () => {
     const isLoggedIn = useStore((state)=>{
         state.isLoggedIn
     })
-    return isLoggedIn  ? <Outlet /> : <Navigate to="/dashboard" />;
+    return !isLoggedIn  ? <Outlet /> : <Navigate to="/dashboard" />;
 }
 
 export default Public;
